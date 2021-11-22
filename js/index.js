@@ -1,4 +1,3 @@
-
 let books = [];
 
 function Book(title, author) {
@@ -6,47 +5,45 @@ function Book(title, author) {
   this.author = author;
 }
 // Function to add a book
-function addBook(title, author) {
-  books.push(new Book(title, author));
+function addBook(book) {
+  books.push(book);
 }
 // Function to remove a book
-// function removeBook(title, author) {
-//   books = books.filter(book => !(book.title == title && book.author == author));
-// }
-
 function removeBook(book) {
-  books = books.filter(bookEl => bookEl != book);
+  books = books.filter((bookEl) => bookEl !== book);
 }
-
-addBook('blah', 'asdfasdfh');
-addBook('adsf', 'wbry56u3');
-addBook('fdg', 'rgyj4');
-addBook('zxcv', 'fjk6568ik');
-
-console.log(books);
-
-
-
-const titleElement = document.querySelector('#title');
-const title = titleElement.value;
-const authorElement = document.querySelector('#author');
-const author = authorElement.value; 
-const bookList = document.querySelector('#book-list');
-
-for (let book of books) {
-  const li = document.createElement("li");
-  const titleP = document.createElement("p");
-  titleP.innerText = book.title;
-  const authorP = document.createElement("p");
-  authorP.innerText = book.author;
-  const removeButton = document.createElement("button");
-  removeButton.innerText = 'REMOVE';
-  removeButton.addEventListener("click", () => {
-    removeBook(book);
+// Function to add element the html file
+/* prettier-ignore */
+function addBookElement() {
+  /* prettier-ignore */
+  const titleElement = document.querySelector('#title');
+  const title = titleElement.value;
+  /* prettier-ignore */
+  const authorElement = document.querySelector('#author');
+  const author = authorElement.value;
+  const newBook = new Book(title, author);
+  addBook(newBook);
+  /* prettier-ignore */
+  const bookList = document.querySelector('#book-list');
+  const li = document.createElement('li');
+  const titleP = document.createElement('p');
+  titleP.innerText = title;
+  const authorP = document.createElement('p');
+  authorP.innerText = author;
+  /* prettier-ignore */
+  const removeButton = document.createElement('button');
+  /* prettier-ignore */
+  removeButton.addEventListener('click', () => {
+    removeBook(newBook);
     li.remove();
   });
+  removeButton.innerText = 'REMOVE';
   li.appendChild(titleP);
   li.appendChild(authorP);
   li.appendChild(removeButton);
   bookList.appendChild(li);
 }
+/* prettier-ignore */
+const addButton = document.getElementById('add-button');
+/* prettier-ignore */
+addButton.addEventListener('click', addBookElement);
