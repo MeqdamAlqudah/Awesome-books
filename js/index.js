@@ -1,4 +1,3 @@
-
 let books = JSON.parse(localStorage.getItem('books') || '[]');
 const bookList = document.querySelector('#book-list');
 const titleElement = document.querySelector('#title');
@@ -15,21 +14,8 @@ function addBook(book) {
 }
 
 function removeBook(book) {
-  books = books.filter(bookEl => bookEl !== book);
+  books = books.filter((bookEl) => bookEl !== book);
   localStorage.setItem('books', JSON.stringify(books));
-}
-
-for (let book of books) {
-  addBookElement(book, ()=>{});
-}
-
-function addNewBookElement() {
-  const title = titleElement.value;
-  titleElement.value = '';
-  const author = authorElement.value;
-  authorElement.value = '';
-  const newBook = new Book(title, author);
-  addBookElement(newBook, addBook);
 }
 
 function addBookElement(book, addBook) {
@@ -44,6 +30,7 @@ function addBookElement(book, addBook) {
     removeBook(book);
     li.remove();
   });
+
   removeButton.innerText = 'REMOVE';
   li.appendChild(titleP);
   li.appendChild(authorP);
@@ -52,4 +39,13 @@ function addBookElement(book, addBook) {
 }
 
 const addButton = document.getElementById('add-button');
+function addNewBookElement() {
+  const title = titleElement.value;
+  titleElement.value = '';
+  const author = authorElement.value;
+  authorElement.value = '';
+  const newBook = new Book(title, author);
+  addBookElement(newBook, addBook);
+}
 addButton.addEventListener('click', addNewBookElement);
+books.forEach((book) => addBookElement(book, () => {}));
