@@ -1,40 +1,47 @@
-let books = [];
+
+let books = JSON.parse(localStorage.getItem('books') || '[]');
+const bookList = document.querySelector('#book-list');
+const titleElement = document.querySelector('#title');
+const authorElement = document.querySelector('#author');
 
 function Book(title, author) {
   this.title = title;
   this.author = author;
 }
-// Function to add a book
+
 function addBook(book) {
   books.push(book);
+  localStorage.setItem('books', JSON.stringify(books));
 }
-// Function to remove a book
+
 function removeBook(book) {
-  books = books.filter((bookEl) => bookEl !== book);
+  books = books.filter(bookEl => bookEl !== book);
+  localStorage.setItem('books', JSON.stringify(books));
 }
-// Function to add element the html file
-/* prettier-ignore */
-function addBookElement() {
-  /* prettier-ignore */
-  const titleElement = document.querySelector('#title');
+
+for (let book of books) {
+  addBookElement(book, ()=>{});
+}
+
+function addNewBookElement() {
   const title = titleElement.value;
-  /* prettier-ignore */
-  const authorElement = document.querySelector('#author');
+  titleElement.value = '';
   const author = authorElement.value;
+  authorElement.value = '';
   const newBook = new Book(title, author);
-  addBook(newBook);
-  /* prettier-ignore */
-  const bookList = document.querySelector('#book-list');
+  addBookElement(newBook, addBook);
+}
+
+function addBookElement(book, addBook) {
+  addBook(book);
   const li = document.createElement('li');
   const titleP = document.createElement('p');
-  titleP.innerText = title;
+  titleP.innerText = book.title;
   const authorP = document.createElement('p');
-  authorP.innerText = author;
-  /* prettier-ignore */
+  authorP.innerText = book.author;
   const removeButton = document.createElement('button');
-  /* prettier-ignore */
   removeButton.addEventListener('click', () => {
-    removeBook(newBook);
+    removeBook(book);
     li.remove();
   });
   removeButton.innerText = 'REMOVE';
@@ -43,7 +50,6 @@ function addBookElement() {
   li.appendChild(removeButton);
   bookList.appendChild(li);
 }
-/* prettier-ignore */
+
 const addButton = document.getElementById('add-button');
-/* prettier-ignore */
-addButton.addEventListener('click', addBookElement);
+addButton.addEventListener('click', addNewBookElement);
