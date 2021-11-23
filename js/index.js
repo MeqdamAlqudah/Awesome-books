@@ -1,4 +1,4 @@
-import Book from './book.js'
+import Book from './book.js';
 
 class BookOperation {
   static books = JSON.parse(localStorage.getItem('books') || '[]');
