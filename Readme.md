@@ -1,47 +1,50 @@
-# Project Name
-Awesome-books
+# Awesome-books
 
-# PR
+The project looks like this
 
+![screenshot](./images/screenshot.png)
 
 ## Built With
 
-- Html
-- css
+- HTML
+- CSS
 - JavaScript
 
-## Deployed version
-
--not available yet
 ## Getting Started
 
--open the index.html file in chrome and see the project
-
-### Setup
-
--click the green code button in the repo and then download the files or you can clone the repo using Git.
+**Download/clone the repository. Open index.html file in Google Chrome browser. Open DevTools and use Toggle device toolbar to show how the site looks on a smartphone.**
 
 #### To get a local copy up and running follow these simple example steps.
 
 - Click the green `Code` button on the repo and copy link
 - In your local PC, open your terminal in the folder you would like to clone the project.
 - Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/MeqdamAlqudah/Awesome-books/`
-- On the terminal, navigate into the directory like so: `cd Portfolio-setup-and-mobile-version-skeleton`
-
-### Prerequisites
-
-Chrome or any explorer
+- On the terminal, navigate into the directory like so: `cd Awesome-books`
 
 ## Authors
 
 👤 **Meqdam Al-qudah**
 
-
 - [GitHub](https://github.com/MeqdamAlqudah)
 - [Twitter](https://twitter.com/MeqdamQudah)
 - [LinkedIn](www.linkedin.com/in/meqdam-al-qudah-7514a21b5)
 
-👤 **Bogdan Szczerbak**
+👤 **Bohdan Shcherbak**
+
 - [GitHub](https://github.com/akucintavalent)
 - [Twitter](https://twitter.com/ibodi828)
 - [LinkedIn](https://www.linkedin.com/in/bohdan-shcherbak/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page.
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
