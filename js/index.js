@@ -25,9 +25,9 @@ class BookOperation {
     addBook(book);
     const li = document.createElement('li');
     const titleP = document.createElement('p');
-    titleP.innerText = book.title;
+    titleP.innerText = '"' + book.title + '"';
     const authorP = document.createElement('p');
-    authorP.innerText = book.author;
+    authorP.innerText = 'by ' + book.author;
     const removeButton = document.createElement('button');
     removeButton.addEventListener('click', () => {
       BookOperation.removeBook(book);
