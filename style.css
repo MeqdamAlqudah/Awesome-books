@@ -3,6 +3,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+header {
+ width: 100vw;
+}
+
 ul {
   list-style: none;
 }
@@ -51,6 +63,11 @@ body {
   box-shadow: 4px 4px;
 }
 
+footer p {
+  height: auto;
+  margin-bottom: 0;
+}
+
 #book-list li p {
   margin: 5px;
 }
@@ -78,7 +95,7 @@ section {
 
 #menu-list {
   display: flex;
-  width: 98vw;
+  width: 98%;
   padding: 10px;
   border: 2px solid black;
   gap: 10px;
@@ -97,4 +114,20 @@ section {
 .first-two {
   border-right: 2px solid black;
   padding: 7px;
+}
+
+footer {
+  width: 98vw;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+/* #contact-info-section {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 5%;
+} */
+
+#contact-info-section p {
+  margin: 5vw;
 }
