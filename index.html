@@ -13,21 +13,46 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="display-6">Awesome books</h1>
-    <ul id="book-list"></ul>
-    <hr class="add-book-hr">
-    <h2>Add a new book</h2>
-    <ul id="add-list">
-      <li>
-        <input type="text" name="title" id="title" placeholder="Title" />
-      </li>
-      <li>
-        <input type="text" name="author" id="author" placeholder="Author" />
-      </li>
-      <li>
-        <button id="add-button" type="button">Add</button>
-      </li>
-    </ul>
+    <header>
+      <ul id="menu-list">
+        <li>Awesome Books</li>
+        <li>
+          <a class="first-two">List</a>
+        </li>
+        <li>
+          <a class="first-two">Add new</a>
+        </li>
+        <li>
+          <a>Contact</a>
+        </li>
+      </ul>
+      <p class="date-and-time"></p>
+    </header>
+    <section id="book-list-section" >
+      <h1 class="display-6">Awesome books</h1>
+      <ul id="book-list"></ul>
+    </section>
+    <section id="add-book-section">
+      <h2>Add a new book</h2>
+      <ul id="add-list">
+        <li>
+          <input type="text" name="title" id="title" placeholder="Title" />
+        </li>
+        <li>
+          <input type="text" name="author" id="author" placeholder="Author" />
+        </li>
+        <li>
+          <button id="add-button" type="button">Add</button>
+        </li>
+      </ul>
+    </section>
+    <section id="contact-info-section">
+
+    </section>
+    <footer>
+
+    </footer>
     <script type="module" src="./js/index.js"></script>
+    <script src="https://moment.github.io/luxon/global/luxon.js"></script>
   </body>
 </html>
