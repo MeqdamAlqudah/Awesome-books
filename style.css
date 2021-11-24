@@ -51,9 +51,6 @@ body {
 }
 
 #book-list li p {
-<<<<<<< HEAD
-  margin: 0;
-=======
   margin: 5px;
 }
 
@@ -65,5 +62,4 @@ body {
 
 #add-list li input {
   border: 2px solid black;
->>>>>>> b75671268567975291b91aa7eb70b183262ea078
 }
