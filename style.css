@@ -128,3 +128,8 @@ footer {
 .hidden {
   display: none;
 }
+
+.date-and-time {
+  float: right;
+  margin-right: 2vw;
+}

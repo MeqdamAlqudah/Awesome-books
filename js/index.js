@@ -58,7 +58,7 @@ const list = document.querySelector('#book-list-section');
 const addNew = document.querySelector('#add-book-section');
 const contact = document.querySelector('#contact-info-section');
 
-const openList = function () {
+function openList () {
   if (list.classList.contains('hidden')) {
     list.classList.remove('hidden');
     addNew.classList.add('hidden');
@@ -66,7 +66,7 @@ const openList = function () {
   }
 };
 
-const openAddNew = function () {
+function openAddNew () {
   if (addNew.classList.contains('hidden')) {
     addNew.classList.remove('hidden');
     contact.classList.add('hidden');
@@ -74,7 +74,7 @@ const openAddNew = function () {
   }
 };
 
-const openContact = function () {
+function openContact () {
   if (contact.classList.contains('hidden')) {
     contact.classList.remove('hidden');
     list.classList.add('hidden');
@@ -82,6 +82,30 @@ const openContact = function () {
   }
 };
 
-document.querySelector('.list-btn').addEventListener('click', openList);
-document.querySelector('.add-new-btn').addEventListener('click', openAddNew);
-document.querySelector('.contact-btn').addEventListener('click', openContact);
+const listBtn = document.querySelector('.list-btn');
+const AddNewBtn = document.querySelector('.add-new-btn');
+const contactBtn = document.querySelector('.contact-btn');
+listBtn.style.color = '#0d6efd';
+listBtn.addEventListener('click', () => {
+  listBtn.style.color = '#0d6efd';
+  AddNewBtn.style.color = 'black';
+  contactBtn.style.color = 'black';
+  openList()
+});
+
+AddNewBtn.addEventListener('click', () => {
+  listBtn.style.color = 'black';
+  AddNewBtn.style.color = '#0d6efd';
+  contactBtn.style.color = 'black';
+  openAddNew();
+});
+
+contactBtn.addEventListener('click', () => {
+  listBtn.style.color = 'black';
+  AddNewBtn.style.color = 'black';
+  contactBtn.style.color = '#0d6efd';
+  openContact();
+});
+
+const dateAndTime = document.querySelector('.date-and-time');
+dateAndTime.innerText = luxon.DateTime.now().setLocale('en-US').toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
