@@ -1,3 +1,4 @@
+import luxon from './luxon.js';
 import Book from './book.js';
 
 class BookOperation {
@@ -58,29 +59,29 @@ const list = document.querySelector('#book-list-section');
 const addNew = document.querySelector('#add-book-section');
 const contact = document.querySelector('#contact-info-section');
 
-function openList () {
+function openList() {
   if (list.classList.contains('hidden')) {
     list.classList.remove('hidden');
     addNew.classList.add('hidden');
     contact.classList.add('hidden');
   }
-};
+}
 
-function openAddNew () {
+function openAddNew() {
   if (addNew.classList.contains('hidden')) {
     addNew.classList.remove('hidden');
     contact.classList.add('hidden');
     list.classList.add('hidden');
   }
-};
+}
 
-function openContact () {
+function openContact() {
   if (contact.classList.contains('hidden')) {
     contact.classList.remove('hidden');
     list.classList.add('hidden');
     addNew.classList.add('hidden');
   }
-};
+}
 
 const listBtn = document.querySelector('.list-btn');
 const AddNewBtn = document.querySelector('.add-new-btn');
@@ -90,7 +91,7 @@ listBtn.addEventListener('click', () => {
   listBtn.style.color = '#0d6efd';
   AddNewBtn.style.color = 'black';
   contactBtn.style.color = 'black';
-  openList()
+  openList();
 });
 
 AddNewBtn.addEventListener('click', () => {
