@@ -53,3 +53,35 @@ class BookOperation {
 
 BookOperation.addButton.addEventListener('click', BookOperation.addNewBookElement);
 BookOperation.books.forEach((book) => BookOperation.addBookElement(book, () => {}));
+
+const list = document.querySelector('#book-list-section');
+const addNew = document.querySelector('#add-book-section');
+const contact = document.querySelector('#contact-info-section');
+
+const openList = function () {
+  if (list.classList.contains('hidden')) {
+    list.classList.remove('hidden');
+    addNew.classList.add('hidden');
+    contact.classList.add('hidden');
+  }
+};
+
+const openAddNew = function () {
+  if (addNew.classList.contains('hidden')) {
+    addNew.classList.remove('hidden');
+    contact.classList.add('hidden');
+    list.classList.add('hidden');
+  }
+};
+
+const openContact = function () {
+  if (contact.classList.contains('hidden')) {
+    contact.classList.remove('hidden');
+    list.classList.add('hidden');
+    addNew.classList.add('hidden');
+  }
+};
+
+document.querySelector('.list-btn').addEventListener('click', openList);
+document.querySelector('.add-new-btn').addEventListener('click', openAddNew);
+document.querySelector('.contact-btn').addEventListener('click', openContact);

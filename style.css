@@ -3,16 +3,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-} */
-
 header {
- width: 100vw;
+  width: 100vw;
 }
 
 ul {
@@ -50,10 +42,6 @@ body {
   align-items: center;
 }
 
-#book-list li:nth-child(odd) {
-  background-color: rgb(211, 211, 211);
-}
-
 #book-list li button {
   width: auto;
   font-size: 14px;
@@ -66,6 +54,10 @@ body {
 footer p {
   height: auto;
   margin-bottom: 0;
+}
+
+#contact-info-section p {
+  margin: 5vw;
 }
 
 #book-list li p {
@@ -102,13 +94,23 @@ section {
   margin: 4px;
 }
 
+/* #menu-list li {
+  width: 100vw;
+} */
+
 #menu-list li:first-child {
   margin-right: auto;
+  font-size: 82%;
+}
+
+#book-list li:nth-child(odd) {
+  background-color: rgb(211, 211, 211);
 }
 
 #menu-list a {
   text-decoration: none;
   color: black;
+  font-size: 12px;
 }
 
 .first-two {
@@ -120,14 +122,9 @@ footer {
   width: 98vw;
   border: 2px solid black;
   padding: 10px;
+  margin: 9px;
 }
 
-/* #contact-info-section {
-  box-sizing: border-box;
-  width: 100vw;
-  padding: 5%;
-} */
-
-#contact-info-section p {
-  margin: 5vw;
+.hidden {
+  display: none;
 }
