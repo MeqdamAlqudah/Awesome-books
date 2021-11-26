@@ -1,3 +1,4 @@
+import luxon from './luxon.js';
 import Book from './book.js';
 
 class BookOperation {
@@ -53,3 +54,59 @@ class BookOperation {
 
 BookOperation.addButton.addEventListener('click', BookOperation.addNewBookElement);
 BookOperation.books.forEach((book) => BookOperation.addBookElement(book, () => {}));
+
+const list = document.querySelector('#book-list-section');
+const addNew = document.querySelector('#add-book-section');
+const contact = document.querySelector('#contact-info-section');
+
+function openList() {
+  if (list.classList.contains('hidden')) {
+    list.classList.remove('hidden');
+    addNew.classList.add('hidden');
+    contact.classList.add('hidden');
+  }
+}
+
+function openAddNew() {
+  if (addNew.classList.contains('hidden')) {
+    addNew.classList.remove('hidden');
+    contact.classList.add('hidden');
+    list.classList.add('hidden');
+  }
+}
+
+function openContact() {
+  if (contact.classList.contains('hidden')) {
+    contact.classList.remove('hidden');
+    list.classList.add('hidden');
+    addNew.classList.add('hidden');
+  }
+}
+
+const listBtn = document.querySelector('.list-btn');
+const AddNewBtn = document.querySelector('.add-new-btn');
+const contactBtn = document.querySelector('.contact-btn');
+listBtn.style.color = '#0d6efd';
+listBtn.addEventListener('click', () => {
+  listBtn.style.color = '#0d6efd';
+  AddNewBtn.style.color = 'black';
+  contactBtn.style.color = 'black';
+  openList();
+});
+
+AddNewBtn.addEventListener('click', () => {
+  listBtn.style.color = 'black';
+  AddNewBtn.style.color = '#0d6efd';
+  contactBtn.style.color = 'black';
+  openAddNew();
+});
+
+contactBtn.addEventListener('click', () => {
+  listBtn.style.color = 'black';
+  AddNewBtn.style.color = 'black';
+  contactBtn.style.color = '#0d6efd';
+  openContact();
+});
+
+const dateAndTime = document.querySelector('.date-and-time');
+dateAndTime.innerText = luxon.DateTime.now().setLocale('en-US').toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
