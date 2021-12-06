@@ -53,7 +53,7 @@ class BookOperation {
 }
 
 BookOperation.addButton.addEventListener('click', BookOperation.addNewBookElement);
-BookOperation.books.forEach((book) => BookOperation.addBookElement(book, () => {}));
+BookOperation.books.forEach((book) => BookOperation.addBookElement(book, () => { }));
 
 const list = document.querySelector('#book-list-section');
 const addNew = document.querySelector('#add-book-section');
