@@ -1,3 +1,138 @@
-h1 {
-  display: block;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+#add-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+}
+
+#add-list li {
+  margin-top: 10px;
+}
+
+#book-list {
+  border-color: black;
+  border: 2px;
+  border-style: solid;
+  width: 90%;
+  padding: 0;
+}
+
+#book-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#book-list li button {
+  width: auto;
+  font-size: 14px;
+  height: 2rem;
+  margin: 5px 15px;
+  margin-left: auto;
+  box-shadow: 4px 4px;
+}
+
+footer p {
+  height: auto;
+  margin-bottom: 0;
+}
+
+#contact-info-section p {
+  margin: 5vw;
+}
+
+#book-list li p {
+  margin: 5px;
+}
+
+.add-book-hr {
+  width: 90px;
+  border: 1px solid black !important;
+  opacity: 1;
+}
+
+#add-list li input {
+  border: 2px solid black;
+}
+
+#add-button {
+  box-shadow: 4px 4px;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu-list {
+  display: flex;
+  width: 98%;
+  padding: 10px;
+  border: 2px solid black;
+  gap: 10px;
+  margin: 4px;
+}
+
+#menu-list li:first-child {
+  margin-right: auto;
+  font-size: 82%;
+}
+
+#book-list li:nth-child(odd) {
+  background-color: rgb(211, 211, 211);
+}
+
+#menu-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.first-two {
+  border-right: 2px solid black;
+  padding: 7px;
+}
+
+footer {
+  width: 98vw;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 9px;
+  justify-self: end;
+}
+
+.hidden {
+  display: none;
+}
+
+.date-and-time {
+  float: right;
+  margin-right: 2vw;
 }
