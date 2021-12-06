@@ -1,5 +1,5 @@
 {
-  "name": "conference-page-project",
+  "name": "Awesome-books",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,15 +7,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MeqdamAlqudah/Conference-page-project.git"
+    "url": "git+https://github.com/MeqdamAlqudah/Awesome-books.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MeqdamAlqudah/Conference-page-project/issues"
+    "url": "https://github.com/MeqdamAlqudah/Awesome-books/issues"
   },
-  "homepage": "https://github.com/MeqdamAlqudah/Conference-page-project#readme",
+  "homepage": "https://github.com/MeqdamAlqudah/Awesome-books#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
